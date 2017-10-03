@@ -48,7 +48,8 @@ public class GameWindow extends JFrame {
         currentStory = storyMap.get(newStoryId);
 //        EventManager.pushUIMessageNewLine(currentStory.text);
 //        System.out.print(currentStory);
-//        System.out.println(storyMap.get(newStoryId));
+//        System.out.println(newStoryId);
+//        System.out.println(currentStory);
 
     }
     private long lastTimeUpdate = -1;
@@ -65,8 +66,7 @@ public class GameWindow extends JFrame {
                 "Tiếng kẽo kẹt buông xuống từ trần nhà, kéo theo chùm sáng lờ mờ quanh căn phòng. Không dễ để nhận ra có bao nhiêu người đang ở trong căn phòng này.\n" +
                         "Trong lúc lần mò xung quanh căn phòng, Có tiếng nói vang lên :\n" +
                         "Này chàng trai trẻ, chàng trai tên là gì vậy?",
-                new novels.Choice("sang","E000002"),
-                new novels.Choice("other","E000003")
+                new novels.Choice("sang","E000002")
         );
 
 //        story1.id ="E000001";
@@ -267,6 +267,13 @@ public class GameWindow extends JFrame {
 
         );
 
+        Story story99 = new Story("E999999",
+                "\"Không Không CLGT\" dậy đi sửa mạng đi mày!\n" +
+                        "Sáng nửa tỉnh nửa mê lật đật bỏ đi. Không màng bận tâm đến giấc mơ kỳ lạ vừa rồi.",
+                new novels.Choice("next","E000022")
+
+        );
+
         Story story20 = new Story("E000020",
                 "Một hành trình mới. ... etc",
                 new novels.Choice("next","E000022")
@@ -280,7 +287,7 @@ public class GameWindow extends JFrame {
         );
 
         storyMap.put(story22.id,story22);
-
+        storyMap.put(story99.id,story99);
         storyMap.put(story20.id,story20);
         storyMap.put(story19.id,story19);
         storyMap.put(story18.id,story18);
@@ -309,30 +316,31 @@ public class GameWindow extends JFrame {
         InputManager.instance.addCommandListener(new CommandListener() {
             @Override
             public void onCommandFinished(String command) {
-//                EventManager.pushUIMessageNewLine("");
-//                EventManager.pushUIMessageNewLine(command);
-//                EventManager.pushUIMessageNewLine("");
+                EventManager.pushUIMessageNewLine("");
+                EventManager.pushUIMessageNewLine("Your Command: "+command);
+                EventManager.pushUIMessageNewLine("");
                 for(novels.Choice choice: currentStory.choices){
                     if(choice.match(command)){
                         // String newStoryId = choice.to;
                         changeStory(choice.to);
-//                        System.out.print(choice.to);
+                        EventManager.pushUIMessageNewLine(currentStory.text);
+//                        System.out.println(choice.to);
 //                        System.out.print(storyMap);
+                        if(choice.to == "E000005" || choice.to == "E000006" || choice.to == "E000009" || choice.to =="E000021"){
+                            EventManager.pushUIMessageNewLine("");
+                            EventManager.pushUIMessageNewLine("Press next to continue");
+                            EventManager.pushUIMessageNewLine("");
+
+                        }else if (choice.to == "E000020" || choice.to == "E999999"){
+                            EventManager.pushUIMessageNewLine("");
+                            EventManager.pushUIMessageNewLine("END GAME");
+                            EventManager.pushUIMessageNewLine("");
+                        }
                         break;
+                    }else if(!choice.match(command) ){
+                        EventManager.pushUIMessageNewLine("Please write the right command ");
                     }
-                    else if(choice.match("no")){
-                        changeStory(choice.to);
-//                        System.out.print(choice.to);
-                        break;
-                    }else if(choice.match("yes")){
-                        changeStory(choice.to);
-//                        System.out.print(choice.to);
-//                        System.out.println("yes");
-                        break;
-                    }else if(choice.match("other")){
-                        changeStory(choice.to);
-                        break;
-                    }
+
                 }
             }
 
@@ -347,35 +355,35 @@ public class GameWindow extends JFrame {
 
 
         //====================================================================================
-        InputManager.instance.addCommandListener(new CommandListener() {
-            @Override
-            public void onCommandFinished(String command) {
-                EventManager.pushUIMessageNewLine("");
-                EventManager.pushUIMessageNewLine(command);
-                EventManager.pushUIMessageNewLine("");
-                if(command.equalsIgnoreCase("map")){
-                    showMap();
-                }else if(command.equalsIgnoreCase("right")){
-                    if( (playerX == mapWidth)) {
-                        EventManager.pushUIMessageNewLine("Can't go there");
-                    }else {
-                        playerX++;
-                        EventManager.pushUIMessageNewLine("You just moved to ;00FF00right;");
-                    }
-                }else if(command.equalsIgnoreCase("sang")){
-                    currentStory = story2;
-                    EventManager.pushUIMessageNewLine(currentStory.text);
-                }else{
-                    currentStory = story3;
-                    EventManager.pushUIMessageNewLine(currentStory.text);
-                }
-            }
-
-            @Override
-            public void commandChanged(String command) {
-
-            }
-        });
+//        InputManager.instance.addCommandListener(new CommandListener() {
+//            @Override
+//            public void onCommandFinished(String command) {
+//                EventManager.pushUIMessageNewLine("");
+//                EventManager.pushUIMessageNewLine(command);
+//                EventManager.pushUIMessageNewLine("");
+//                if(command.equalsIgnoreCase("map")){
+//                    showMap();
+//                }else if(command.equalsIgnoreCase("right")){
+//                    if( (playerX == mapWidth)) {
+//                        EventManager.pushUIMessageNewLine("Can't go there");
+//                    }else {
+//                        playerX++;
+//                        EventManager.pushUIMessageNewLine("You just moved to ;00FF00right;");
+//                    }
+//                }else if(command.equalsIgnoreCase("sang")){
+//                    currentStory = story2;
+//                    EventManager.pushUIMessageNewLine(currentStory.text);
+//                }else{
+//                    currentStory = story3;
+//                    EventManager.pushUIMessageNewLine(currentStory.text);
+//                }
+//            }
+//
+//            @Override
+//            public void commandChanged(String command) {
+//
+//            }
+//        });
     }
 
     private void setupFont() {

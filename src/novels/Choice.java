@@ -10,9 +10,11 @@ public class Choice {
     public Choice(String value, String to){
         this.value = value;
         this.to = to;
+
     }
 
+
     public boolean match(String answer){
-        return value.equalsIgnoreCase(answer) || value.equalsIgnoreCase("other");
+        return value.equals(answer) || value.equals("other");
     }
 }
