@@ -15,6 +15,15 @@ public class Choice {
 
 
     public boolean match(String answer){
-        return value.equals(answer) || value.equals("other");
+//        System.out.println(String.format("%s vs %s", answer, this.value));
+        return value.equalsIgnoreCase(answer) || value.equalsIgnoreCase("other");
+    }
+
+    @Override
+    public String toString() {
+        return "Choice{" +
+                "value='" + value + '\'' +
+                ", to='" + to + '\'' +
+                '}';
     }
 }
