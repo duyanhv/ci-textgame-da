@@ -1,6 +1,6 @@
 [
     {
-        "message": "Tiếng kẽo kẹt buông xuống từ trần nhà, kéo theo chùm sáng lờ mờ quanh căn phòng. Không dễ để nhận ra có bao nhiêu người đang ở trong căn phòng này.\nTrong lúc lần mò xung quanh căn phòng, Có tiếng nói vang lên :\nNày chàng trai trẻ, chàng trai tên là gì vậy?",
+        "message": "Tiếng kẽo kẹt buông xuống từ trần nhà, kéo theo chùm sáng lờ mờ quanh căn phòng. Không dễ để nhận ra có bao nhiêu người đang ở trong căn phòng này.\nTrong lúc lần mò xung quanh căn phòng, Có tiếng nói vang lên :\nNày chàng trai trẻ, chàng trai tên là gì vậy? (sang)",
         "time": null,
         "ID": "E000001",
         "type": "Input",
@@ -16,7 +16,7 @@
         ]
     },
     {
-        "message": "Được đó quả là 1 cái tên kiên cường và sáng sủa.\nKhông biết cậu có nhớ mình đã từng là 1 chiến binh vĩ đại đến từ đế quốc Neflim cổ xưa hay chăng ?",
+        "message": "Được đó quả là 1 cái tên kiên cường và sáng sủa.\nKhông biết cậu có nhớ mình đã từng là 1 chiến binh vĩ đại đến từ đế quốc Neflim cổ xưa hay chăng ? (YES/NO)",
         "time": null,
         "ID": "E000002",
         "type": "Input",
@@ -192,7 +192,7 @@
         "answers": []
     },
     {
-        "message": "Chính vì cậu là 1 người anh Hùng như thế nên không biết cậu có ý cứu giúp thế giới này 1 lần nữa hay không ?\n",
+        "message": "Chính vì cậu là 1 người anh Hùng như thế nên không biết cậu có ý cứu giúp thế giới này 1 lần nữa hay không ? (YES/NO)\n",
         "time": null,
         "ID": "E000010",
         "type": "Input",
@@ -208,7 +208,7 @@
         ]
     },
     {
-        "message": "Sao cậu lại nỡ từ chối lời thỉnh cầu của lão già này?\nMong cậu nghĩ lại dùm được không ?",
+        "message": "Sao cậu lại nỡ từ chối lời thỉnh cầu của lão già này?\nMong cậu nghĩ lại dùm được không ? (YES/NO)",
         "time": null,
         "ID": "E000011",
         "type": "Input",
@@ -224,7 +224,7 @@
         ]
     },
     {
-        "message": "Có lẽ nào cậu bỏ mặc hàng ngàn người chết đói ở Phi Châu sao. Tất cả họ đang chờ 1 cái gật đầu của cậu. Cậu chỉ cần like 1 cái là xong?\nCậu suy nghĩ lại chứ ?",
+        "message": "Có lẽ nào cậu bỏ mặc hàng ngàn người chết đói ở Phi Châu sao. Tất cả họ đang chờ 1 cái gật đầu của cậu. Cậu chỉ cần like 1 cái là xong?\nCậu suy nghĩ lại chứ ? (YES/NO)",
         "time": null,
         "ID": "E000012",
         "type": "Input",
@@ -240,7 +240,7 @@
         ]
     },
     {
-        "message": "Không tính người Phi Châu đi, vậy cậu có nghĩ tới hàng ngàn hàng trăm bà mẹ Việt nam anh hùng đã hi sinh chồng, con để bảo vệ đất nước này sao ?\nCậu suy nghĩ lại chứ ?",
+        "message": "Không tính người Phi Châu đi, vậy cậu có nghĩ tới hàng ngàn hàng trăm bà mẹ Việt nam anh hùng đã hi sinh chồng, con để bảo vệ đất nước này sao ?\nCậu suy nghĩ lại chứ ? (YES/NO)",
         "time": null,
         "ID": "E000013",
         "type": "Input",
@@ -256,7 +256,7 @@
         ]
     },
     {
-        "message": "Vậy còn Gấu thì sao, cậu đang tâm để cho lũ quỷ sai giày xé cơ thể  lẫn tâm hồn mỏng manh dễ vỡ của Gấu hay sao?\nCậu suy nghĩ lại chứ?",
+        "message": "Vậy còn Gấu thì sao, cậu đang tâm để cho lũ quỷ sai giày xé cơ thể  lẫn tâm hồn mỏng manh dễ vỡ của Gấu hay sao?\nCậu suy nghĩ lại chứ? (YES/NO)",
         "time": null,
         "ID": "E000014",
         "type": "Input",
@@ -272,7 +272,7 @@
         ]
     },
     {
-        "message": "Thôi thì Gấu bạc, gấu phản cậu thì cậu cho qua đi. vậy còn các em gái xinh tươi, mơn mởn khác sẽ vuột khỏi tay cậu sao ?\nCậu suy nghĩ lại chư?",
+        "message": "Thôi thì Gấu bạc, gấu phản cậu thì cậu cho qua đi. vậy còn các em gái xinh tươi, mơn mởn khác sẽ vuột khỏi tay cậu sao ?\nCậu suy nghĩ lại chư? (YES/NO)",
         "time": null,
         "ID": "E000015",
         "type": "Input",
@@ -288,7 +288,7 @@
         ]
     },
     {
-        "message": "Không ? KHÔNG ? Cậu từ chối trách nhiệm của mình sao ?\nTa cho cậu cơ hội cuối cùng để chọn, Có hoặc Không ?",
+        "message": "Không ? KHÔNG ? Cậu từ chối trách nhiệm của mình sao ?\nTa cho cậu cơ hội cuối cùng để chọn, Có hoặc Không ? (YES/NO)",
         "time": null,
         "ID": "E000016",
         "type": "Input",
@@ -304,7 +304,7 @@
         ]
     },
     {
-        "message": "Vẫn là Không, TA KHÔNG THỂ NGỜ LẠI CÓ 1 TÊN VÔ LẠI NHƯ CẬU LẠI CÓ THỂ THỪA HƯỞNG DÒNG MÁU DANH GIÁ ẤY!\nNể tình anh em với LightLord ta cho cậu thêm 1 cơ hội nữa! Có hoặc Không?",
+        "message": "Vẫn là Không, TA KHÔNG THỂ NGỜ LẠI CÓ 1 TÊN VÔ LẠI NHƯ CẬU LẠI CÓ THỂ THỪA HƯỞNG DÒNG MÁU DANH GIÁ ẤY!\nNể tình anh em với LightLord ta cho cậu thêm 1 cơ hội nữa! Có hoặc Không? (YES/NO)",
         "time": null,
         "ID": "E000017",
         "type": "Input",
@@ -320,7 +320,7 @@
         ]
     },
     {
-        "message": "Thôi , tôi xin cậu mà, cậu giúp cho, vạn lần mong cậu rủ lòng thương cho cái xã hội thối nát này.\nMong cậu nghĩ lại cho!",
+        "message": "Thôi , tôi xin cậu mà, cậu giúp cho, vạn lần mong cậu rủ lòng thương cho cái xã hội thối nát này.\nMong cậu nghĩ lại cho! (YES/NO)",
         "time": null,
         "ID": "E000018",
         "type": "Input",
@@ -336,7 +336,7 @@
         ]
     },
     {
-        "message": "Hu, hu, hu, hu cậu nỡ lòng nào nhìn thế giới này đi vào suy tàn. cậu nỡ lòng nào không cho tôi cơ hội ăn Phở nữa.\nÀ .. nhầm ... không cho tôi cơ hội ngắm nhìn ánh mặt trời này nữa.\nLiệu cậu nghĩ lại chứ ?",
+        "message": "Hu, hu, hu, hu cậu nỡ lòng nào nhìn thế giới này đi vào suy tàn. cậu nỡ lòng nào không cho tôi cơ hội ăn Phở nữa.\nÀ .. nhầm ... không cho tôi cơ hội ngắm nhìn ánh mặt trời này nữa.\nLiệu cậu nghĩ lại chứ ? (YES/NO)",
         "time": null,
         "ID": "E000019",
         "type": "Input",
@@ -355,7 +355,7 @@
         "message": "\"Không Không CLGT\" dậy đi sửa mạng đi mày!\nSáng nửa tỉnh nửa mê lật đật bỏ đi. Không màng bận tâm đến giấc mơ kỳ lạ vừa rồi.",
         "time": null,
         "ID": "E999999",
-        "type": "timeOut",
+        "type": "Timeout",
         "answers": []
     },
     {

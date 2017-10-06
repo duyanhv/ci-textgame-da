@@ -13,44 +13,128 @@ import settings.Settings;
 
 import javax.swing.JFrame;
 import java.awt.*;
-import java.awt.Choice;
 import java.util.List;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
-import static java.lang.System.load;
 import static java.lang.System.nanoTime;
 
 /**
  * Created by huynq on 7/28/17.
  */
 public class GameWindow extends JFrame {
-    private int playerX =3;
-    private int playerY = 5;
+    private int playerX =1;
+    private int playerY = 1;
     private int mapWidth = 5;
     private int mapHeight = 5;
+    public static final int NUMBER_OF_TARGETS = 3;
+    private int x = 0;
+    private int y = 0;
     private Story currentStory;
-
+    private int[][] map = new int[7][7];
+    private int[][] trap = new int [4][2];
     HashMap<String, Story> storyMap  = new HashMap<>();
-    private void showMap(){
+
+    private boolean checkMap(int x, int y, int[][] map){
+        if(y == 0 || x == 0 || y == (map.length -1) || x == (map.length-1)){
+            return true;
+        }
+        return false;
+    }
+
+//    private void initTrap(int[][] map){
+//        Random rdm = new Random();
+//        int i = rdm.nextInt(6);
+//        int j = rdm.nextInt(6);
+//        if(checkMap(i,j,map)){
+//            initTrap(map);
+//        }else{
+//            int counter = 0;
+//            while(counter<NUMBER_OF_TARGETS){
+//                map[i][j] = 1;
+//                counter++;
+//            }
+//        }
+//        System.out.println(i + "-" + j);
+//
+//        }
+
+
+
+    private void initTrap(int map[][]){
+        Random rdm = new Random();
+
+        int counter = 0;
+
+        while (counter < NUMBER_OF_TARGETS){
+            int rdmY = rdm.nextInt(6);
+            int rdmX = rdm.nextInt(6);
+            if(map[rdmY][rdmX] == -1){
+                map[rdmY][rdmX] = 1;
+                counter++;
+            }
+        }
+    }
+
+    private void showMap(int[][] map){
 
         EventManager.pushUIMessageNewLine("");
-        for(int y = 0; y< mapHeight; y++){
-            for(int x = 0; x< mapWidth;x++){
-                if(x==playerX && y == playerY){
+
+        for(int y = 0; y< map.length; y++){
+            for(int x = 0; x< map.length;x++){
+//                if(x==playerX && y == playerY){
+//                    EventManager.pushUIMessage(" @ ");
+//
+//                }else{
+//                    EventManager.pushUIMessage(" x ");
+//                }
+
+                if(checkMap(x,y,map)){
+                    map[y][x] = 0;
+                } else{
+                    map[y][x] = -1;
+                }
+
+                map[playerY][playerX] = 2;
+                map[3][4] =1;
+                map[2][3] =1;
+            }
+        }
+
+
+        if(map[playerY][playerX] == 1){
+            EventManager.pushUIMessageNewLine("You died");
+            return;
+        }
+
+
+
+        for(int y = 0; y < map.length; y++){
+            for(int x = 0; x < map.length;x++){
+                if(map[y][x]  == -1){
+//                    System.out.print("-");
+
+                    EventManager.pushUIMessage(" - ");
+                }else if(map[y][x] == 0){
+//                    System.out.print("*");
                     EventManager.pushUIMessage(" @ ");
-                }else{
-                    EventManager.pushUIMessage(" x ");
+                }else if(map[y][x] == 1){
+                    EventManager.pushUIMessage(" X ");
+                }else if(map[y][x] == 2){
+                    EventManager.pushUIMessage(" P ");
                 }
             }
-            EventManager.pushUIMessageNewLine("");
+//            System.out.println();
+                EventManager.pushUIMessageNewLine("");
         }
+
+
+
     }
     private void changeStory(String newStoryId){
         currentStory = storyMap.get(newStoryId);
@@ -60,9 +144,22 @@ public class GameWindow extends JFrame {
 //        System.out.println(currentStory);
 
         if(currentStory.isType("Timeout")){
+
             EventManager.pushUIMessageNewLine("-------------------------");
             EventManager.pushUIMessageNewLine("|Write ;#FF0000next; to continue!|");
             EventManager.pushUIMessageNewLine("-------------------------");
+
+
+
+            }else if(currentStory.isType("NextArc")){
+            EventManager.pushUIMessageNewLine("-----------------------------");
+            EventManager.pushUIMessageNewLine("|Write ;#FF0000anything; to continue!|");
+            EventManager.pushUIMessageNewLine("-----------------------------");
+
+        }else if(currentStory.isType("Map")){
+            EventManager.pushUIMessageNewLine("------------------------");
+            EventManager.pushUIMessageNewLine("|Write ;#FF0000map; to continue!|");
+            EventManager.pushUIMessageNewLine("------------------------");
         }
 
     }
@@ -109,6 +206,10 @@ public class GameWindow extends JFrame {
             currentStory = stories.get(0);
             EventManager.pushUIMessageNewLine(currentStory.text);
 //            System.out.println(stories);
+
+
+
+
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -408,16 +509,63 @@ public class GameWindow extends JFrame {
                         changeStory(currentStory.time.to);
                         EventManager.pushUIMessageNewLine(currentStory.text);
 
+
+
+                    }else if(command.equalsIgnoreCase("map")){
+                        showMap(map);
+
+                    }else if(command.equalsIgnoreCase("w")){
+                        if(playerY == 0){
+                            EventManager.pushUIMessageNewLine("You can't go there");
+                            showMap(map);
+                        }else{
+                            playerY--;
+                            EventManager.pushUIMessageNewLine("You just moved up");
+                            showMap(map);
+                        }
+
+                    }else if(command.equalsIgnoreCase("s")){
+                        if(playerY == (map.length-1)){
+                            EventManager.pushUIMessageNewLine("You can't go there");
+                            showMap(map);
+                        }else{
+                            playerY++;
+                            EventManager.pushUIMessageNewLine("You just moved down");
+                            showMap(map);
+                        }
+
+                    }else if(command.equalsIgnoreCase("a")){
+                        if(playerX == 0){
+                            EventManager.pushUIMessageNewLine("You can't go there");
+                            showMap(map);
+                        }else{
+                            playerX--;
+                            EventManager.pushUIMessageNewLine("You just moved to the left");
+                            showMap(map);
+                        }
+
+                    }else if(command.equalsIgnoreCase("d")){
+                        if(playerX == (map.length-1)){
+                            EventManager.pushUIMessageNewLine("You can't go there");
+                            showMap(map);
+                        }else{
+                            playerX++;
+                            EventManager.pushUIMessageNewLine("You just moved to the right");
+                            showMap(map);
+
+                        }
+
                     }
 
                 }else if(currentStory.isType("NextArc")){
+
                     currentArc++;
                     loadArc(currentArc);
                 }
 
 
             }
-            
+
 
             @Override
             public void commandChanged(String command) {

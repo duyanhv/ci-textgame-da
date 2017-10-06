@@ -1,6 +1,6 @@
 [
     {
-        "message": "aaaaaaaaa",
+        "message": "Kids, I'm gonna tell you an incredible story. The story of how I met your mother.",
         "time": {
             "to": "E000002",
             "value": "10s"
@@ -10,9 +10,9 @@
         "answers": []
     },
     {
-        "message": "bbbbbbbbb",
-        "time": {
-            "to": "E000003",
+        "message": "Are we being punished for something? - No.",
+        "time":{
+            "to": "E000002",
             "value": "10s"
         },
         "ID": "E000002",
@@ -20,13 +20,13 @@
         "answers": []
     },
     {
-        "message": "ccccccccc",
+        "message": "",
         "time": {
-            "to": "E000000",
+            "to": "",
             "value": "10s"
         },
-        "ID": "E000003",
-        "type": "Timeout",
+        "ID": "map",
+        "type": "Map",
         "answers": []
     }
 ]
