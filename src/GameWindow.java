@@ -10,9 +10,9 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import novels.*;
 import settings.Settings;
-
-import javax.swing.JFrame;
 import java.awt.*;
+import javax.swing.JFrame;
+import gameentities.Map;
 import java.util.List;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -136,12 +136,9 @@ public class GameWindow extends JFrame {
 
 
     }
-    private void changeStory(String newStoryId){
-        currentStory = storyMap.get(newStoryId);
-//        EventManager.pushUIMessageNewLine(currentStory.text);
-//        System.out.print(currentStory);
-//        System.out.println(newStoryId);
-//        System.out.println(currentStory);
+
+    private void changeStory(Story story) {
+        currentStory = story;
 
         if(currentStory.isType("Timeout")){
 
@@ -151,7 +148,7 @@ public class GameWindow extends JFrame {
 
 
 
-            }else if(currentStory.isType("NextArc")){
+        }else if(currentStory.isType("NextArc")){
             EventManager.pushUIMessageNewLine("-----------------------------");
             EventManager.pushUIMessageNewLine("|Write ;#FF0000anything; to continue!|");
             EventManager.pushUIMessageNewLine("-----------------------------");
@@ -161,6 +158,17 @@ public class GameWindow extends JFrame {
             EventManager.pushUIMessageNewLine("|Write ;#FF0000map; to continue!|");
             EventManager.pushUIMessageNewLine("------------------------");
         }
+        EventManager.pushUIMessageNewLine(currentStory.text);
+    }
+
+    private void changeStory(String newStoryId) {
+        changeStory(storyMap.get(newStoryId));
+//        EventManager.pushUIMessageNewLine(currentStory.text);
+//        System.out.print(currentStory);
+//        System.out.println(newStoryId);
+//        System.out.println(currentStory);
+
+
 
     }
     private long lastTimeUpdate = -1;
@@ -172,20 +180,18 @@ public class GameWindow extends JFrame {
         //---------------------------------------------------------------------------------------------
         //add data theo kieu json
 
-        try {
+
+
 
             String url =  "assets/events/event_arc_" + arcNo.toString() + ".json";
-            //Step 1: read text file
-            byte[] bytes = Files.readAllBytes(Paths.get(url));
-            String content = new String(bytes, StandardCharsets.UTF_8);
-
+            String content = Utils.loadStringContent(url);
 
             //Step 2: Parse json using 'gson'
             Gson gson = new Gson();
 
             //sinh ra 1 typetoken
             TypeToken<java.util.List<Story>> token = new TypeToken<List<Story>>(){};
-          List<Story> stories = gson.fromJson(content, token.getType());
+            List<Story> stories = gson.fromJson(content, token.getType());
 
           //clear map cu
             storyMap.clear();
@@ -203,17 +209,14 @@ public class GameWindow extends JFrame {
             for(Story story: stories){
                 storyMap.put(story.id,story);
             }
-            currentStory = stories.get(0);
-            EventManager.pushUIMessageNewLine(currentStory.text);
+
+            changeStory(stories.get(0));
 //            System.out.println(stories);
 
 
 
 
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     int currentArc = 0;
@@ -494,7 +497,7 @@ public class GameWindow extends JFrame {
                         if(choice.match(command)){
                             // String newStoryId = choice.to;
                             changeStory(choice.to);
-                            EventManager.pushUIMessageNewLine(currentStory.text);
+//                            EventManager.pushUIMessageNewLine(currentStory.text);
 //                        System.out.println(choice.to);
 //                        System.out.print(storyMap);
 
@@ -507,57 +510,67 @@ public class GameWindow extends JFrame {
                 }else if(currentStory.isType("Timeout")){
                     if(command.equalsIgnoreCase("next")){
                         changeStory(currentStory.time.to);
-                        EventManager.pushUIMessageNewLine(currentStory.text);
+//                        EventManager.pushUIMessageNewLine(currentStory.text);
 
 
-
-                    }else if(command.equalsIgnoreCase("map")){
-                        showMap(map);
-
-                    }else if(command.equalsIgnoreCase("w")){
-                        if(playerY == 0){
-                            EventManager.pushUIMessageNewLine("You can't go there");
-                            showMap(map);
-                        }else{
-                            playerY--;
-                            EventManager.pushUIMessageNewLine("You just moved up");
-                            showMap(map);
-                        }
-
-                    }else if(command.equalsIgnoreCase("s")){
-                        if(playerY == (map.length-1)){
-                            EventManager.pushUIMessageNewLine("You can't go there");
-                            showMap(map);
-                        }else{
-                            playerY++;
-                            EventManager.pushUIMessageNewLine("You just moved down");
-                            showMap(map);
-                        }
-
-                    }else if(command.equalsIgnoreCase("a")){
-                        if(playerX == 0){
-                            EventManager.pushUIMessageNewLine("You can't go there");
-                            showMap(map);
-                        }else{
-                            playerX--;
-                            EventManager.pushUIMessageNewLine("You just moved to the left");
-                            showMap(map);
-                        }
-
-                    }else if(command.equalsIgnoreCase("d")){
-                        if(playerX == (map.length-1)){
-                            EventManager.pushUIMessageNewLine("You can't go there");
-                            showMap(map);
-                        }else{
-                            playerX++;
-                            EventManager.pushUIMessageNewLine("You just moved to the right");
-                            showMap(map);
-
-                        }
 
                     }
+//                    else if(command.equalsIgnoreCase("w")){
+//                        if(playerY == 0){
+//                            EventManager.pushUIMessageNewLine("You can't go there");
+//                            showMap(map);
+//                        }else{
+//                            playerY--;
+//                            EventManager.pushUIMessageNewLine("You just moved up");
+//                            showMap(map);
+//                        }
+//
+//                    }else if(command.equalsIgnoreCase("s")){
+//                        if(playerY == (map.length-1)){
+//                            EventManager.pushUIMessageNewLine("You can't go there");
+//                            showMap(map);
+//                        }else{
+//                            playerY++;
+//                            EventManager.pushUIMessageNewLine("You just moved down");
+//                            showMap(map);
+//                        }
+//
+//                    }else if(command.equalsIgnoreCase("a")){
+//                        if(playerX == 0){
+//                            EventManager.pushUIMessageNewLine("You can't go there");
+//                            showMap(map);
+//                        }else{
+//                            playerX--;
+//                            EventManager.pushUIMessageNewLine("You just moved to the left");
+//                            showMap(map);
+//                        }
+//
+//                    }else if(command.equalsIgnoreCase("d")){
+//                        if(playerX == (map.length-1)){
+//                            EventManager.pushUIMessageNewLine("You can't go there");
+//                            showMap(map);
+//                        }else{
+//                            playerX++;
+//                            EventManager.pushUIMessageNewLine("You just moved to the right");
+//                            showMap(map);
+//
+//                        }
+//
+//                    }
 
-                }else if(currentStory.isType("NextArc")){
+                }else if(currentStory.isType("Map")){
+                    // showMap(map);
+                    if(command.equalsIgnoreCase("map")){
+//                            changeStory(currentStory.time.to);
+                        String mapContent = Utils.loadStringContent("assets/maps/map_lvl1.txt");
+                        Map map = new Map(mapContent);
+
+                        System.out.println(map);
+
+
+                    }
+                }
+                else if(currentStory.isType("NextArc")){
 
                     currentArc++;
                     loadArc(currentArc);

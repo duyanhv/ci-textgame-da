@@ -10,9 +10,9 @@
         "answers": []
     },
     {
-        "message": "Are we being punished for something? - No.",
+        "message": "Are we being punished for something? - No. ",
         "time":{
-            "to": "E000002",
+            "to": "E000MAP",
             "value": "10s"
         },
         "ID": "E000002",
@@ -25,8 +25,18 @@
             "to": "",
             "value": "10s"
         },
-        "ID": "map",
+        "ID": "E000MAP",
         "type": "Map",
         "answers": []
-    }
+    },
+    {
+    "message": "End training",
+    "time":{
+        "to": "E000002",
+        "value": "10s"
+    },
+    "ID": "E000003",
+    "type": "Timeout",
+    "answers": []
+}
 ]
