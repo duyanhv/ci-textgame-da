@@ -54,7 +54,7 @@ public class Map {
              MapRow row = rows.get(yWall);
              row.checkWall(coordinateX);
              for(int i = 0; i < coordinateX.length; i ++){
-                 if(coordinateX[i] != -1){
+                 if(coordinateX[i] != 0){
                      for(int j = 0; j< coordinateY.length; j++){
                          coordinateY[j] = yWall;
 //                         System.out.println("Wall: "+coordinateX[i]+ " "+coordinateY[i]);
@@ -68,7 +68,7 @@ public class Map {
 
     public boolean checkWall(){
         for(int i = 0; i < coordinateX.length; i ++){
-            if(coordinateX[i] != -1){
+            if(coordinateX[i] != 0){
                 for(int j = 0; j< coordinateY.length; j++){
                     if(playerX == coordinateX[i] || playerY == coordinateY[j]){
                         return false;

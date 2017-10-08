@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02207789-1dca-4e41-8fe7-1f783d19a617" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$1.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$2.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$3.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/gameentities/Map.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/gameentities/Map.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/gameentities/MapRow.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/gameentities/MapRow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/maps/map_lvl1.txt" afterPath="$PROJECT_DIR$/assets/maps/map_lvl1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameWindow.java" afterPath="$PROJECT_DIR$/src/GameWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gameentities/Map.java" afterPath="$PROJECT_DIR$/src/gameentities/Map.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gameentities/MapRow.java" afterPath="$PROJECT_DIR$/src/gameentities/MapRow.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +21,7 @@
       <file leaf-file-name="GameWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
+            <state relative-caret-position="384">
               <caret line="613" column="39" lean-forward="false" selection-start-line="613" selection-start-column="32" selection-end-line="613" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -54,8 +44,8 @@
       <file leaf-file-name="Map.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gameentities/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="56" column="39" lean-forward="false" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+            <state relative-caret-position="158">
+              <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1070,9 +1060,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameentities/MapRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
+        <state relative-caret-position="384">
           <caret line="613" column="39" lean-forward="false" selection-start-line="613" selection-start-column="32" selection-end-line="613" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1091,22 +1093,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameentities/MapRow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameentities/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="56" column="39" lean-forward="false" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+        <state relative-caret-position="158">
+          <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
