@@ -16,10 +16,6 @@ import gameentities.Map;
 import java.util.List;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
 
 import static java.lang.System.nanoTime;
@@ -36,9 +32,11 @@ public class GameWindow extends JFrame {
     private int x = 0;
     private int y = 0;
     private Story currentStory;
-    private int[][] map = new int[7][7];
+//    private int[][] map = new int[7][7];
     private int[][] trap = new int [4][2];
     HashMap<String, Story> storyMap  = new HashMap<>();
+
+    private Map map;
 
     private boolean checkMap(int x, int y, int[][] map){
         if(y == 0 || x == 0 || y == (map.length -1) || x == (map.length-1)){
@@ -135,6 +133,11 @@ public class GameWindow extends JFrame {
 
 
 
+    }
+
+    private void showMapJson(){
+        String mapContent = Utils.loadStringContent("assets/maps/map_lvl1.txt");
+        map = new Map(mapContent);
     }
 
     private void changeStory(Story story) {
@@ -562,13 +565,60 @@ public class GameWindow extends JFrame {
                     // showMap(map);
                     if(command.equalsIgnoreCase("map")){
 //                            changeStory(currentStory.time.to);
-                        String mapContent = Utils.loadStringContent("assets/maps/map_lvl1.txt");
-                        Map map = new Map(mapContent);
+                        if(map == null){
+                            showMapJson();
 
-                        System.out.println(map);
+                        }
 
+
+//                        map.pushUI();
+//                        System.out.println(map);
+
+
+                    }else if(command.equalsIgnoreCase("w")){
+
+                        if(map.checkWall()){
+                            EventManager.pushUIMessageNewLine("You can't go there");
+
+                        }else{
+                            Map.playerY--;
+                            EventManager.pushUIMessageNewLine("You just moved up");
+
+                        }
+
+                    }else if(command.equalsIgnoreCase("s")){
+                        if(map.checkWall()){
+                            EventManager.pushUIMessageNewLine("You can't go there");
+
+                        }else{
+                            Map.playerY++;
+                            EventManager.pushUIMessageNewLine("You just moved down");
+
+                        }
+
+                    }else if(command.equalsIgnoreCase("a")){
+                        if(map.checkWall()){
+                            EventManager.pushUIMessageNewLine("You can't go there");
+
+                        }else{
+                            Map.playerX--;
+                            EventManager.pushUIMessageNewLine("You just moved to the left");
+
+                        }
+
+                    }else if(command.equalsIgnoreCase("d")){
+                        if(map.checkWall()){
+                            EventManager.pushUIMessageNewLine("You can't go there");
+
+                        }else{
+                            Map.playerX++;
+                            EventManager.pushUIMessageNewLine("You just moved to the right");
+
+
+                        }
 
                     }
+                    map.pushUI();
                 }
                 else if(currentStory.isType("NextArc")){
 
