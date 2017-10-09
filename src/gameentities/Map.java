@@ -119,13 +119,7 @@ public class Map {
 
     }
 
-    public boolean checkKey(){
-        if(Objects.equals(get(playerX, playerY), "M")){
-            return true;
-        }
 
-        return false;
-    }
 
     @Override
     public String toString() {

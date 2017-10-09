@@ -29,6 +29,7 @@ public class GameWindow extends JFrame {
     private int mapWidth = 5;
     private int mapHeight = 5;
     int count = 0;
+    public boolean flag = false;
     public static final int NUMBER_OF_TARGETS = 3;
     private int x = 0;
     private int y = 0;
@@ -140,6 +141,7 @@ public class GameWindow extends JFrame {
         String mapContent = Utils.loadStringContent("assets/maps/map_lvl1.txt");
         map = new Map(mapContent);
     }
+
 
     private void changeStory(Story story) {
         currentStory = story;
@@ -586,24 +588,32 @@ public class GameWindow extends JFrame {
 
                             count++;
                         }else if(Objects.equals(map.get(Map.playerX, Map.playerY), "%")){
+                            /**
+                             * =))
+                             */
                             Random rdm = new Random();
-
                             int hash = rdm.nextInt(100);
                             if(hash < 50){
-                                EventManager.pushUIMessageNewLine("Oh no, you just losed 10 points, odd: "+hash+"%");
+                                EventManager.pushUIMessageNewLine("Oh no, you just losed 10 points, with the odd of 50% ");
                                 count -= 10;
                             }else{
-                                EventManager.pushUIMessageNewLine("Oh yes, you just gained 50 points, odd: "+hash+"%");
+                                EventManager.pushUIMessageNewLine("Oh yes, you just gained 50 points, with the odd of 50%");
                                 count += 50;
                             }
 
-                        }else if(Objects.equals(map.get(Map.playerX, Map.playerY+1), "#")){
-                            if(map.checkKey()){
+
+
+
+                        }else if(Objects.equals(map.get(Map.playerX, Map.playerY), "!")){
+                             flag = true;
+                             EventManager.pushUIMessageNewLine("You just got this new item: - KEY -");
+                        }else if(Objects.equals(map.get(Map.playerX, Map.playerY), "#")){
+                            if(flag){
                                 EventManager.pushUIMessageNewLine("CHANGING STORY");
                             }else{
-                                EventManager.pushUIMessageNewLine("You need key");
+                                EventManager.pushUIMessageNewLine("You need key to unlock this section");
                             }
-                        }
+                    }
 
 
 
