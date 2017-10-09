@@ -28,6 +28,7 @@ public class GameWindow extends JFrame {
     private int playerY = 1;
     private int mapWidth = 5;
     private int mapHeight = 5;
+    int count = 0;
     public static final int NUMBER_OF_TARGETS = 3;
     private int x = 0;
     private int y = 0;
@@ -518,48 +519,7 @@ public class GameWindow extends JFrame {
 
 
                     }
-//                    else if(command.equalsIgnoreCase("w")){
-//                        if(playerY == 0){
-//                            EventManager.pushUIMessageNewLine("You can't go there");
-//                            showMap(map);
-//                        }else{
-//                            playerY--;
-//                            EventManager.pushUIMessageNewLine("You just moved up");
-//                            showMap(map);
-//                        }
-//
-//                    }else if(command.equalsIgnoreCase("s")){
-//                        if(playerY == (map.length-1)){
-//                            EventManager.pushUIMessageNewLine("You can't go there");
-//                            showMap(map);
-//                        }else{
-//                            playerY++;
-//                            EventManager.pushUIMessageNewLine("You just moved down");
-//                            showMap(map);
-//                        }
-//
-//                    }else if(command.equalsIgnoreCase("a")){
-//                        if(playerX == 0){
-//                            EventManager.pushUIMessageNewLine("You can't go there");
-//                            showMap(map);
-//                        }else{
-//                            playerX--;
-//                            EventManager.pushUIMessageNewLine("You just moved to the left");
-//                            showMap(map);
-//                        }
-//
-//                    }else if(command.equalsIgnoreCase("d")){
-//                        if(playerX == (map.length-1)){
-//                            EventManager.pushUIMessageNewLine("You can't go there");
-//                            showMap(map);
-//                        }else{
-//                            playerX++;
-//                            EventManager.pushUIMessageNewLine("You just moved to the right");
-//                            showMap(map);
-//
-//                        }
-//
-//                    }
+
 
                 }else if(currentStory.isType("Map")){
                     // showMap(map);
@@ -575,9 +535,10 @@ public class GameWindow extends JFrame {
 //                        System.out.println(map);
 
 
-                    }else if(command.equalsIgnoreCase("w")){
+                    }
+                    else if(command.equalsIgnoreCase("w")){
 
-                        if(map.checkWall()){
+                        if(Objects.equals(map.get(Map.playerX, Map.playerY-1), "/")){
                             EventManager.pushUIMessageNewLine("You can't go there");
 
                         }else{
@@ -587,7 +548,7 @@ public class GameWindow extends JFrame {
                         }
 
                     }else if(command.equalsIgnoreCase("s")){
-                        if(map.checkWall()){
+                        if(Objects.equals(map.get(Map.playerX, Map.playerY+1), "/")){
                             EventManager.pushUIMessageNewLine("You can't go there");
 
                         }else{
@@ -597,7 +558,7 @@ public class GameWindow extends JFrame {
                         }
 
                     }else if(command.equalsIgnoreCase("a")){
-                        if(map.checkWall()){
+                        if(Objects.equals(map.get(Map.playerX-1, Map.playerY), "/")){
                             EventManager.pushUIMessageNewLine("You can't go there");
 
                         }else{
@@ -607,7 +568,7 @@ public class GameWindow extends JFrame {
                         }
 
                     }else if(command.equalsIgnoreCase("d")){
-                        if(map.checkWall()){
+                        if(Objects.equals(map.get(Map.playerX+1, Map.playerY), "/")){
                             EventManager.pushUIMessageNewLine("You can't go there");
 
                         }else{
@@ -618,7 +579,36 @@ public class GameWindow extends JFrame {
                         }
 
                     }
+
+
+                        if(Objects.equals(map.get(Map.playerX, Map.playerY), "$")){
+
+
+                            count++;
+                        }else if(Objects.equals(map.get(Map.playerX, Map.playerY), "%")){
+                            Random rdm = new Random();
+
+                            int hash = rdm.nextInt(100);
+                            if(hash < 50){
+                                EventManager.pushUIMessageNewLine("Oh no, you just losed 10 points, odd: "+hash+"%");
+                                count -= 10;
+                            }else{
+                                EventManager.pushUIMessageNewLine("Oh yes, you just gained 50 points, odd: "+hash+"%");
+                                count += 50;
+                            }
+
+                        }else if(Objects.equals(map.get(Map.playerX, Map.playerY+1), "#")){
+                            if(map.checkKey()){
+                                EventManager.pushUIMessageNewLine("CHANGING STORY");
+                            }else{
+                                EventManager.pushUIMessageNewLine("You need key");
+                            }
+                        }
+
+
+
                     map.pushUI();
+                    EventManager.pushUIMessageNewLine("Point: "+count);
                 }
                 else if(currentStory.isType("NextArc")){
 

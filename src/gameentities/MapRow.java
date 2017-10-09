@@ -4,6 +4,7 @@ import bases.events.EventManager;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * Created by duyanh on 10/7/17.
@@ -12,6 +13,7 @@ import java.util.Arrays;
  * class nay dai dien cho 1 hang
  */
 public class MapRow {
+    private Map map;
     public String[] cells;
 //    public int[] coordinateX = new int[100];
 
@@ -42,16 +44,20 @@ public class MapRow {
         }
     }
 
-    public void checkWall(int coordinateX[]){
-        for(int xWall = 0; xWall < cells.length; xWall++){
-            if(cells[xWall].equalsIgnoreCase(("/"))){
-                for(int x = 0; x < coordinateX.length; x++ ){
-                    coordinateX[x] = xWall;
-                }
-            }
-        }
 
-    }
+
+//    public void checkWall(int coordinateX[]){
+//        for(int xWall = 0; xWall < cells.length; xWall++){
+//            if(cells[xWall].equalsIgnoreCase(("/"))){
+//                for(int x = 0; x < coordinateX.length; x++ ){
+//                    coordinateX[x] = xWall;
+//                }
+//            }
+//        }
+//
+//    }
+
+
 
     public int findPlayerXAndReplace() {
         for(int x = 0; x<cells.length; x++){

@@ -3,6 +3,7 @@ package gameentities;
 import bases.events.EventManager;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Created by duyanh on 10/7/17.
@@ -16,7 +17,7 @@ public class Map {
     public ArrayList<MapRow> rows;
     static public int width;
     static public int height;
-
+    public int count = 0;
     static public int playerX;
     static public int playerY;
     public int[] coordinateX = new int[100];
@@ -50,36 +51,38 @@ public class Map {
          }
 
 
-         for(int yWall = 0; yWall < rows.size();yWall++){
-             MapRow row = rows.get(yWall);
-             row.checkWall(coordinateX);
-             for(int i = 0; i < coordinateX.length; i ++){
-                 if(coordinateX[i] != 0){
-                     for(int j = 0; j< coordinateY.length; j++){
-                         coordinateY[j] = yWall;
-//                         System.out.println("Wall: "+coordinateX[i]+ " "+coordinateY[i]);
-                         break;
-                     }
-                 }
-             }
-         }
+
+
+//         for(int yWall = 0; yWall < rows.size();yWall++){
+//             MapRow row = rows.get(yWall);
+//             row.checkWall(coordinateX);
+//             for(int i = 0; i < coordinateX.length; i ++){
+//                 if(coordinateX[i] != 0){
+//                     for(int j = 0; j< coordinateY.length; j++){
+//                         coordinateY[j] = yWall;
+////                         System.out.println("Wall: "+coordinateX[i]+ " "+coordinateY[i]);
+//                         break;
+//                     }
+//                 }
+//             }
+//         }
 
     }
 
-    public boolean checkWall(){
-        for(int i = 0; i < coordinateX.length; i ++){
-            if(coordinateX[i] != 0){
-                for(int j = 0; j< coordinateY.length; j++){
-                    if(playerX == coordinateX[i] || playerY == coordinateY[j]){
-                        return false;
-                    }
+//    public boolean checkWall(){
+//        for(int i = 0; i < coordinateX.length; i ++){
+//            if(coordinateX[i] != 0){
+//                for(int j = 0; j< coordinateY.length; j++){
+//                    if(playerX == coordinateX[i] || playerY == coordinateY[j]){
+//                        return false;
+//                    }
+////
+//                }
+//            }
+//        }
 //
-                }
-            }
-        }
-
-        return true;
-    }
+//        return true;
+//    }
 
     public String get(int x, int y){
         //TODO: check width, height, if out of range => return null
@@ -112,6 +115,16 @@ public class Map {
 
             EventManager.pushUIMessageNewLine("");
         }
+
+
+    }
+
+    public boolean checkKey(){
+        if(Objects.equals(get(playerX, playerY), "M")){
+            return true;
+        }
+
+        return false;
     }
 
     @Override

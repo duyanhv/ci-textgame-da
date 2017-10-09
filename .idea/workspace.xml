@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02207789-1dca-4e41-8fe7-1f783d19a617" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$1.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$2.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$3.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/gameentities/Map.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/gameentities/Map.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/gameentities/MapRow.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/gameentities/MapRow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/maps/map_lvl1.txt" afterPath="$PROJECT_DIR$/assets/maps/map_lvl1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameWindow.java" afterPath="$PROJECT_DIR$/src/GameWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gameentities/Map.java" afterPath="$PROJECT_DIR$/src/gameentities/Map.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gameentities/MapRow.java" afterPath="$PROJECT_DIR$/src/gameentities/MapRow.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,36 +28,39 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameWindow.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="613" column="39" lean-forward="false" selection-start-line="613" selection-start-column="32" selection-end-line="613" selection-end-column="39" />
+            <state relative-caret-position="162">
+              <caret line="595" column="115" lean-forward="true" selection-start-line="595" selection-start-column="115" selection-end-line="595" selection-end-column="115" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#checkMap#0;class#GameWindow#0" expanded="false" />
                 <element signature="method#initTrap#0;class#GameWindow#0" expanded="false" />
                 <element signature="method#showMap#0;class#GameWindow#0" expanded="false" />
-                <element signature="e#6380#6425#0" expanded="false" />
-                <element signature="e#19699#19760#0" expanded="false" />
-                <element signature="e#23981#24067#0" expanded="false" />
+                <element signature="e#6399#6444#0" expanded="false" />
+                <element signature="e#23460#23546#0" expanded="false" />
                 <element signature="method#setupFont#0;class#GameWindow#0" expanded="false" />
                 <element signature="method#setupWindow#0;class#GameWindow#0" expanded="false" />
-                <element signature="e#27150#27304#0" expanded="true" />
-                <element signature="e#27303#27304#0" expanded="true" />
+                <element signature="e#26629#26783#0" expanded="true" />
+                <element signature="e#26726#26727#0" expanded="false" />
+                <element signature="e#26772#26773#0" expanded="false" />
+                <element signature="e#26782#26783#0" expanded="true" />
                 <element signature="method#gameLoop#0;class#GameWindow#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Map.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gameentities/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+            <state relative-caret-position="1313">
+              <caret line="127" column="5" lean-forward="true" selection-start-line="121" selection-start-column="4" selection-end-line="127" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1350#1409#0" expanded="false" />
+                <element signature="e#1933#1966#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -56,12 +69,13 @@
       <file leaf-file-name="MapRow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gameentities/MapRow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+            <state relative-caret-position="491">
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#434#435#0" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
+                <element signature="e#481#482#0" expanded="true" />
+                <element signature="e#512#513#0" expanded="true" />
+                <element signature="e#954#1001#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -93,7 +107,7 @@
             <state relative-caret-position="450">
               <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#704#705#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,8 +165,8 @@
         <option value="$PROJECT_DIR$/src/gameentities/MapLine.java" />
         <option value="$PROJECT_DIR$/assets/maps/map_lvl1.txt" />
         <option value="$PROJECT_DIR$/src/gameentities/MapRow.java" />
-        <option value="$PROJECT_DIR$/src/GameWindow.java" />
         <option value="$PROJECT_DIR$/src/gameentities/Map.java" />
+        <option value="$PROJECT_DIR$/src/GameWindow.java" />
       </list>
     </option>
   </component>
@@ -275,8 +289,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -563,14 +577,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2881356" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16525424" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.212749" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -582,6 +595,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -598,14 +612,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/novels/Choice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -619,7 +625,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#704#705#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -663,13 +669,14 @@
             <element signature="method#checkMap#0;class#GameWindow#0" expanded="false" />
             <element signature="method#initTrap#0;class#GameWindow#0" expanded="false" />
             <element signature="method#showMap#0;class#GameWindow#0" expanded="false" />
-            <element signature="e#6380#6425#0" expanded="false" />
-            <element signature="e#19699#19760#0" expanded="false" />
-            <element signature="e#23981#24067#0" expanded="false" />
+            <element signature="e#6399#6444#0" expanded="false" />
+            <element signature="e#23460#23546#0" expanded="false" />
             <element signature="method#setupFont#0;class#GameWindow#0" expanded="false" />
             <element signature="method#setupWindow#0;class#GameWindow#0" expanded="false" />
-            <element signature="e#27150#27304#0" expanded="true" />
-            <element signature="e#27303#27304#0" expanded="true" />
+            <element signature="e#26629#26783#0" expanded="true" />
+            <element signature="e#26726#26727#0" expanded="false" />
+            <element signature="e#26772#26773#0" expanded="false" />
+            <element signature="e#26782#26783#0" expanded="true" />
             <element signature="method#gameLoop#0;class#GameWindow#0" expanded="false" />
           </folding>
         </state>
@@ -696,7 +703,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#704#705#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -740,13 +747,14 @@
             <element signature="method#checkMap#0;class#GameWindow#0" expanded="false" />
             <element signature="method#initTrap#0;class#GameWindow#0" expanded="false" />
             <element signature="method#showMap#0;class#GameWindow#0" expanded="false" />
-            <element signature="e#6380#6425#0" expanded="false" />
-            <element signature="e#19699#19760#0" expanded="false" />
-            <element signature="e#23981#24067#0" expanded="false" />
+            <element signature="e#6399#6444#0" expanded="false" />
+            <element signature="e#23460#23546#0" expanded="false" />
             <element signature="method#setupFont#0;class#GameWindow#0" expanded="false" />
             <element signature="method#setupWindow#0;class#GameWindow#0" expanded="false" />
-            <element signature="e#27150#27304#0" expanded="true" />
-            <element signature="e#27303#27304#0" expanded="true" />
+            <element signature="e#26629#26783#0" expanded="true" />
+            <element signature="e#26726#26727#0" expanded="false" />
+            <element signature="e#26772#26773#0" expanded="false" />
+            <element signature="e#26782#26783#0" expanded="true" />
             <element signature="method#gameLoop#0;class#GameWindow#0" expanded="false" />
           </folding>
         </state>
@@ -773,7 +781,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#704#705#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -817,13 +825,14 @@
             <element signature="method#checkMap#0;class#GameWindow#0" expanded="false" />
             <element signature="method#initTrap#0;class#GameWindow#0" expanded="false" />
             <element signature="method#showMap#0;class#GameWindow#0" expanded="false" />
-            <element signature="e#6380#6425#0" expanded="false" />
-            <element signature="e#19699#19760#0" expanded="false" />
-            <element signature="e#23981#24067#0" expanded="false" />
+            <element signature="e#6399#6444#0" expanded="false" />
+            <element signature="e#23460#23546#0" expanded="false" />
             <element signature="method#setupFont#0;class#GameWindow#0" expanded="false" />
             <element signature="method#setupWindow#0;class#GameWindow#0" expanded="false" />
-            <element signature="e#27150#27304#0" expanded="true" />
-            <element signature="e#27303#27304#0" expanded="true" />
+            <element signature="e#26629#26783#0" expanded="true" />
+            <element signature="e#26726#26727#0" expanded="false" />
+            <element signature="e#26772#26773#0" expanded="false" />
+            <element signature="e#26782#26783#0" expanded="true" />
             <element signature="method#gameLoop#0;class#GameWindow#0" expanded="false" />
           </folding>
         </state>
@@ -875,13 +884,14 @@
             <element signature="method#checkMap#0;class#GameWindow#0" expanded="false" />
             <element signature="method#initTrap#0;class#GameWindow#0" expanded="false" />
             <element signature="method#showMap#0;class#GameWindow#0" expanded="false" />
-            <element signature="e#6380#6425#0" expanded="false" />
-            <element signature="e#19699#19760#0" expanded="false" />
-            <element signature="e#23981#24067#0" expanded="false" />
+            <element signature="e#6399#6444#0" expanded="false" />
+            <element signature="e#23460#23546#0" expanded="false" />
             <element signature="method#setupFont#0;class#GameWindow#0" expanded="false" />
             <element signature="method#setupWindow#0;class#GameWindow#0" expanded="false" />
-            <element signature="e#27150#27304#0" expanded="true" />
-            <element signature="e#27303#27304#0" expanded="true" />
+            <element signature="e#26629#26783#0" expanded="true" />
+            <element signature="e#26726#26727#0" expanded="false" />
+            <element signature="e#26772#26773#0" expanded="false" />
+            <element signature="e#26782#26783#0" expanded="true" />
             <element signature="method#gameLoop#0;class#GameWindow#0" expanded="false" />
           </folding>
         </state>
@@ -922,22 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bases/uis/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#467#468#0" expanded="false" />
-            <element signature="e#522#523#0" expanded="false" />
-            <element signature="e#557#558#0" expanded="false" />
-            <element signature="e#614#615#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
-            <element signature="e#701#702#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/AbstractList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -971,7 +965,7 @@
         <state relative-caret-position="450">
           <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#704#705#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1022,7 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
           <caret line="12" column="63" lean-forward="false" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1032,6 +1025,8 @@
           <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1350#1409#0" expanded="false" />
+            <element signature="e#1933#1966#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1044,14 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/maps/map_lvl1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -1060,45 +1047,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameentities/MapRow.java">
+    <entry file="file://$PROJECT_DIR$/src/bases/uis/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+        <state relative-caret-position="360">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#467#468#0" expanded="false" />
+            <element signature="e#522#523#0" expanded="false" />
+            <element signature="e#557#558#0" expanded="false" />
+            <element signature="e#614#615#0" expanded="false" />
+            <element signature="e#651#652#0" expanded="false" />
+            <element signature="e#701#702#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Objects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="613" column="39" lean-forward="false" selection-start-line="613" selection-start-column="32" selection-end-line="613" selection-end-column="39" />
+        <state relative-caret-position="106">
+          <caret line="54" column="19" lean-forward="false" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+          <folding>
+            <element signature="e#1410#1411#0" expanded="false" />
+            <element signature="e#1471#1472#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/maps/map_lvl1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameentities/MapRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#checkMap#0;class#GameWindow#0" expanded="false" />
-            <element signature="method#initTrap#0;class#GameWindow#0" expanded="false" />
-            <element signature="method#showMap#0;class#GameWindow#0" expanded="false" />
-            <element signature="e#6380#6425#0" expanded="false" />
-            <element signature="e#19699#19760#0" expanded="false" />
-            <element signature="e#23981#24067#0" expanded="false" />
-            <element signature="method#setupFont#0;class#GameWindow#0" expanded="false" />
-            <element signature="method#setupWindow#0;class#GameWindow#0" expanded="false" />
-            <element signature="e#27150#27304#0" expanded="true" />
-            <element signature="e#27303#27304#0" expanded="true" />
-            <element signature="method#gameLoop#0;class#GameWindow#0" expanded="false" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#954#1001#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gameentities/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+        <state relative-caret-position="1313">
+          <caret line="127" column="5" lean-forward="true" selection-start-line="121" selection-start-column="4" selection-end-line="127" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1350#1409#0" expanded="false" />
+            <element signature="e#1933#1966#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="595" column="115" lean-forward="true" selection-start-line="595" selection-start-column="115" selection-end-line="595" selection-end-column="115" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#checkMap#0;class#GameWindow#0" expanded="false" />
+            <element signature="method#initTrap#0;class#GameWindow#0" expanded="false" />
+            <element signature="method#showMap#0;class#GameWindow#0" expanded="false" />
+            <element signature="e#6399#6444#0" expanded="false" />
+            <element signature="e#23460#23546#0" expanded="false" />
+            <element signature="method#setupFont#0;class#GameWindow#0" expanded="false" />
+            <element signature="method#setupWindow#0;class#GameWindow#0" expanded="false" />
+            <element signature="e#26629#26783#0" expanded="true" />
+            <element signature="e#26726#26727#0" expanded="false" />
+            <element signature="e#26772#26773#0" expanded="false" />
+            <element signature="e#26782#26783#0" expanded="true" />
+            <element signature="method#gameLoop#0;class#GameWindow#0" expanded="false" />
           </folding>
         </state>
       </provider>
